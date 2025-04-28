@@ -3,7 +3,7 @@ clc;
 close all;
 
 M = 4;
-data = randi([0 M-1],[2,1]);
+data = randi([0 M-1],[2,10]);
 disp('data =');
 disp(data);
 x_hat = qammod(data,M,UnitAveragePower=true);

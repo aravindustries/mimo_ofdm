@@ -3,10 +3,12 @@ clc;
 close all;
 
 M = 4;
-data = randi([0 M-1],[2,7]);
+data = randi([0 M-1],[2,10]);
 disp('data =');
 disp(data);
-x = qammod(data,M,UnitAveragePower=true);
+x = qammod(data,M,UnitAveragePower=true); % unit average power
+N0 = 1;
+snr = 1/N0;
 
 disp('x');
 disp(x);
@@ -19,14 +21,6 @@ H = normrnd(0, 1, [Mr,Mt]) + 1j*normrnd(0, 1, [Mr, Mt]);
 disp('H');
 disp(H);
 fprintf('rank of H: %f\n', rank(H));
-detH = det(H);
-fprintf('det(H) = %f\n', detH);
-
-if detH == 0
-    Hinv = pinv(H);
-else
-    Hinv = inv(H);
-end
 
 n = zeros(size(x));
 
@@ -34,7 +28,7 @@ y = H*x + n;
 disp('y =');
 disp(y);
 
-x_hat = Hinv*y;
+x_hat = H'*inv((H'*H+(N0*eye(2))))*y;
 
 rx = qamdemod(x_hat, M);
 disp('rx =');
