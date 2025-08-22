@@ -160,13 +160,6 @@ $$
 ![MIMO-OFDM Throughput](project_assets/report_images/report_img_p5_2.png)
 
 
-## Reproducing Results
-
-* MATLAB R2022b+ recommended
-* Run each part’s script to produce BER/throughput figures
-* Requires Communications Toolbox (`qammod`/`qamdemod`)
-
-
 ## Notes
 
 * Pilot pattern for 802.11a: `[1, 1, 1, -1]`
