@@ -1,4 +1,4 @@
-# Wireless Engineering Project 5 — MIMO / OFDM Equalization
+# MIMO-OFDM
 
 This repository contains MATLAB simulations and results for:
 
