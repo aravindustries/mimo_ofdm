@@ -1,13 +1,3 @@
-You’re right—my last draft had Parts 1 & 2 swapped and the figures in the wrong sections. Here’s a **clean, GitHub-ready README** that follows your report’s structure exactly:
-
-* **Part 1 = Flat 2×2 MIMO (Precoding, ZF, LMMSE)**
-* **Part 2 = OFDM (SISO) ZF vs MMSE**
-* **Part 3 = 2×2 MIMO-OFDM (per-subcarrier LMMSE)**
-
-Equations are written with `\[...\]`/`\(...\)` so they render on GitHub, and the **result figures are placed in the correct parts**:
-
----
-
 # Wireless Engineering Project 5 — MIMO / OFDM Equalization
 
 This repository contains MATLAB simulations and results for:
@@ -20,9 +10,7 @@ This repository contains MATLAB simulations and results for:
 
 (Added for the README) a high-level block diagram of the combined MIMO-OFDM chain:
 
-![MIMO-OFDM System Block Diagram](project_assets/mimo_ofdm_system_block_diagram.png)
-
----
+![MIMO-OFDM System Block Diagram](project_assets/mimo_ofdm_system.jpg)
 
 ## Part 1 — Flat 2×2 MIMO (Precoding, ZF, LMMSE)
 
@@ -78,8 +66,6 @@ $$
 **Throughput across equalizers/channels:**
 ![Throughput — Flat MIMO](project_assets/report_images/report_img_p3_2.png)
 
----
-
 ## Part 2 — OFDM (SISO) with ZF vs. MMSE
 
 ### 802.11a OFDM Parameters
@@ -114,7 +100,6 @@ $$
 **OFDM BER curves (ZF vs. MMSE across multipath):**
 ![OFDM BER Results](project_assets/report_images/report_img_p2_1.png)
 
----
 
 ## Part 3 — 2×2 MIMO-OFDM (Per-Subcarrier LMMSE)
 
@@ -166,14 +151,6 @@ $$
 **Throughput — 2×2 MIMO-OFDM (20 MHz):**
 ![Throughput — MIMO-OFDM](project_assets/report_images/report_img_p4_2.png)
 
----
 
-## Reproduction
-
-* MATLAB R2022b+
-* Requires Communications Toolbox (`qammod`, `qamdemod`)
-* Run each part’s script to regenerate plots
-
----
 
 If any figure filenames differ in your repo, tell me the actual names and I’ll remap them—but the **order and sections above** now match your report: **Part 1=MIMO**, **Part 2=OFDM**, **Part 3=MIMO-OFDM**.
