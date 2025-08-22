@@ -8,11 +8,11 @@ This repository contains MATLAB simulations and results for:
 
 ## System Overview
 
-(Added for the README) a high-level block diagram of the combined MIMO-OFDM chain:
+High-level block diagram of the combined MIMO-OFDM chain:
 
 ![MIMO-OFDM System Block Diagram](project_assets/mimo_ofdm_system.jpg)
 
-## Part 1 — Flat 2×2 MIMO (Precoding, ZF, LMMSE)
+## Flat 2×2 MIMO (Precoding, ZF, LMMSE)
 
 ### Channels Used
 
@@ -58,15 +58,15 @@ $$
 **RX combining:** $\tilde{\mathbf y} = \mathbf U^\mathrm{H} \mathbf y = \mathbf \Sigma \tilde{\mathbf x} + \tilde{\mathbf w}$
 **Parallel subchannels:** $\tilde{y}_i = \sigma_i \tilde{x}_i + \tilde{w}_i$
 
-### Results (from report)
+### Results
 
 **BER across equalizers/channels:**
-![BER — Flat MIMO](project_assets/report_images/report_img_p3_1.png)
+![BER — Flat MIMO](project_assets/report_images/report_img_p2_1.png)
 
 **Throughput across equalizers/channels:**
-![Throughput — Flat MIMO](project_assets/report_images/report_img_p3_2.png)
+![Throughput — Flat MIMO](project_assets/report_images/report_img_p2_2.png)
 
-## Part 2 — OFDM (SISO) with ZF vs. MMSE
+## OFDM (SISO) with ZF vs. MMSE
 
 ### 802.11a OFDM Parameters
 
@@ -95,13 +95,13 @@ $$
 * $h_2 = [1,\ 0.4+0.3j,\ 0.15,\ 0.2+0.1j,\ 0.05]$
 * $h_3 = [1,\ 1.1+0.6j,\ 0.9-0.8j,\ 1.2+0.5j,\ 0.8-0.3j,\ 0.6+0.7j,\ 0.5]$
 
-### Results (from report)
+### Results
 
 **OFDM BER curves (ZF vs. MMSE across multipath):**
-![OFDM BER Results](project_assets/report_images/report_img_p2_1.png)
+![OFDM BER Results](project_assets/report_images/report_img_p3_2.png)
+![OFDM BER Results](project_assets/report_images/report_img_p4_1.png)
 
-
-## Part 3 — 2×2 MIMO-OFDM (Per-Subcarrier LMMSE)
+## 2×2 MIMO-OFDM (Per-Subcarrier LMMSE)
 
 Each TX sends its own OFDM stream; RX removes CP, FFTs, then performs **2×2 LMMSE per subcarrier**.
 
@@ -143,14 +143,11 @@ $$
 \hat{\mathbf X}[k] = \big(\mathbf H[k]^\mathrm{H} \mathbf H[k] + N_0 \mathbf I\big)^{-1} \mathbf H[k]^\mathrm{H} \mathbf Y[k]
 $$
 
-### Results (from report)
+### Results
 
-**BER — 2×2 MIMO-OFDM:**
-![BER — MIMO-OFDM](project_assets/report_images/report_img_p4_1.png)
+**2×2 MIMO-OFDM BER:**
+![BER — MIMO-OFDM](project_assets/report_images/report_img_p5_1.png)
 
-**Throughput — 2×2 MIMO-OFDM (20 MHz):**
-![Throughput — MIMO-OFDM](project_assets/report_images/report_img_p4_2.png)
+**2×2 MIMO-OFDM Throughput (20 MHz):**
+![Throughput — MIMO-OFDM](project_assets/report_images/report_img_p5_2.png)
 
-
-
-If any figure filenames differ in your repo, tell me the actual names and I’ll remap them—but the **order and sections above** now match your report: **Part 1=MIMO**, **Part 2=OFDM**, **Part 3=MIMO-OFDM**.
