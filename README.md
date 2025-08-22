@@ -11,7 +11,7 @@ This repository contains MATLAB simulations and results for:
 
 A high-level block diagram of the combined MIMO-OFDM system
 
-![MIMO-OFDM System Block Diagram](project_assets/mimo_ofdm_system_block_diagram.png)
+![MIMO-OFDM System Block Diagram](project_assets/mimo_ofdm_system.jpg)
 
 
 ## Part 1 — OFDM (SISO) with ZF vs. MMSE
