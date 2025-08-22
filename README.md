@@ -157,7 +157,7 @@ $$
 
 **Effective throughput:**
 
-![MIMO-OFDM Throughput](project_assets/report_images/report_img_p4_2.png)
+![MIMO-OFDM Throughput](project_assets/report_images/report_img_p5_2.png)
 
 
 ## Reproducing Results
